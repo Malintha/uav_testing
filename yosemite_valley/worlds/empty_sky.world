@@ -11,15 +11,17 @@
     <gui>
       <plugin name="video_widget" filename="libgazebo_video_stream_widget.so"/>
     </gui>
+    
     <!-- A global light source -->
     <include>
       <uri>model://sun</uri>
     </include>
+    <!-- A ground plane -->
     <include>
       <uri>model://ground_plane</uri>
     </include>
-     
-   <physics name='default_physics' default='0' type='ode'>
+
+ <physics name='default_physics' default='0' type='ode'>
       <gravity>0 0 -9.8066</gravity>
       <ode>
         <solver>
@@ -40,5 +42,6 @@
       <real_time_update_rate>250</real_time_update_rate>
       <magnetic_field>6.0e-6 2.3e-5 -4.2e-5</magnetic_field>
     </physics>
+
   </world>
 </sdf>
